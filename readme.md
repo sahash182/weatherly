@@ -5,10 +5,10 @@ This is a simple weather app where users type in the city name and the app shows
 In Terminal
 
 clone:
-Step One: $ git clone https://github.com/sahash182/weatherly
+ $ git clone https://github.com/sahash182/weatherly
 
 run server:
-Step Two: $ http-server
+ $ http-server
 
 In Browser
-visit localhost:8080
+visit: localhost:8080
