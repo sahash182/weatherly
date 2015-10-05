@@ -1,0 +1,120 @@
+@import url(https://fonts.googleapis.com/css?family=Bitter);
+body{
+	background-color: white;
+	font-family: 'Bitter', serif;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;
+}
+h5{
+	margin-top: 10px;
+	color: white;
+	font-family: 'Bitter', serif;
+	padding: 0;
+}
+h4{
+	color: white;
+	font-family: 'Bitter', serif;
+	font-size: 30px;
+	text-transform: uppercase;
+}
+h3{
+	color: white;
+	font-family: 'Bitter', serif;
+	font-size: 80px;
+}
+h1{
+	color: white;
+	font-size: 150px;
+	margin-bottom: 0px;
+	font-family: 'Bitter', serif;
+}
+/*degree symbol rotated*/
+span {
+	margin: 0 0 5 0px;
+  display: inline-block;
+}
+/*to make html symbol raised to power*/
+.sup {
+  position: relative;
+  bottom: 1ex; 
+  font-size: 60%;
+}
+#nav{
+	margin-bottom: 54px;
+}
+#logo{
+	color: #f9b21e;
+	font-weight: bold;
+	margin-left: 40px;
+	font-size: 40px;
+}
+#search{
+	margin-top: 10px;
+}
+#search-bar{
+	width: 400px;
+}
+#button{
+	position: absolute;
+	left: -9999px; 
+	width: 1px; 
+	height: 1px;
+}
+#weatherToday{
+	margin: 0px;
+	padding: 0px;
+	background-color: #f8e71c;
+}
+#next-one{
+	background-color: #ffd54f;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	height: 200px;
+}
+#next-two{
+	background-color: #ffb74d;
+	border: none;
+	padding: 0px;
+	margin: 0px;
+	height: 200px;
+
+}
+#next-three{
+	background-color: #ffa000;
+	border: none;
+	margin: 0px;
+	padding: 0px;
+	height: 200px;
+}
+
+/*three divs for dates below*/
+#dates{
+	margin: 0px;
+	padding:0px;
+	text-align: center;
+}
+#date1{
+	color: #ffd54f;
+	font-size: 25px;
+	border-bottom: thick solid #ffd54f;
+	margin: 0px;
+}
+#date2{
+	color: #ffb74d;
+	font-size: 25px;
+	border-bottom: thick solid #ffb74d;
+}
+#date3{
+	color: #ffa000;
+	font-size: 25px;
+	border-bottom: thick solid #ffa000;
+}
+#main{
+	margin: 0;
+	padding: 0;
+}
+
+
+
