@@ -26,13 +26,13 @@ angular.module('weatherly', ['ngRoute'])
       $scope.currentCity = $scope.city;
       var weatherUrl = "http://api.openweathermap.org/data/2.5/forecast?&q="  + city + "&type=accurate&,us&mode=json&callback=JSON_CALLBACK&APPID=8aa25b237192dd69078ca44e1b1e2598";
         $http.jsonp(weatherUrl)
-        .then(function (response) {
+        .then(function (response, status) {
           //error handling if city  not found or no response
-          if (response == undefined || response == null){
+          if (response.data == undefined || response.data == null){
             alert("No City Found!");
-          }else if (response.status !== 400{
-            alert("Mayday! Mayday! The server is down.")
-          } else {
+          }else if (response.data.cod !== "200"){
+            alert("Mayday! Mayday!. The server is down. ");
+          } else{
             $scope.city = '';
             $scope.weather = response.data;
           };
