@@ -20,10 +20,8 @@ angular.module('weatherly', ['ngRoute'])
 .controller('MainCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.photos = [];
     $scope.searchCity = function() {
-        var city = $scope.city.replace(/\s+/, '');
-        $scope.currentCity = $scope.city;
-        console.log($scope.city);
-        console.log(city);
+        var city = $scope.city.replace(/\s+/, '').toUpperCase();
+        //var city1 = city.toUpperCase();
         var weatherUrl = "http://api.openweathermap.org/data/2.5/forecast?&q=" + city + "&type=accurate&,us&mode=json&callback=JSON_CALLBACK&APPID=8aa25b237192dd69078ca44e1b1e2598";
         $http.jsonp(weatherUrl)
             .then(function(response, status) {
@@ -34,9 +32,14 @@ angular.module('weatherly', ['ngRoute'])
                 // } else if (response.data.cod !== "200") {
                 //     alert("Mayday! Mayday!. The server is down. ");
                 // } else {
-                    $scope.city = response.data.city.name;
-                    $scope.weather = response.data;
-                    console.log($scope.city);
+                $scope.currentCity = response.data.city.name.toUpperCase();
+                if ($scope.currentCity !== city){
+                    alert("City not found! \nDisplaying information for\nclosest match "+$scope.currentCity);
+                }
+                //console.log($scope.currentCity);
+                //console.log(city);
+                $scope.weather = response.data;
+                //console.log($scope.city);
 
                // }
 
