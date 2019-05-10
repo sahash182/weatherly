@@ -22,7 +22,7 @@ angular.module('weatherly', ['ngRoute'])
     $scope.searchCity = function() {
         var city = $scope.city.replace(/\s+/, '').toUpperCase();
         //var city1 = city.toUpperCase();
-        var weatherUrl = "http://api.openweathermap.org/data/2.5/forecast?&q=" + city + "&type=accurate&,us&mode=json&callback=JSON_CALLBACK&APPID=8aa25b237192dd69078ca44e1b1e2598";
+        var weatherUrl = "https://api.openweathermap.org/data/2.5/forecast?&q=" + city + "&type=accurate&,us&mode=json&callback=JSON_CALLBACK&APPID=8aa25b237192dd69078ca44e1b1e2598";
         $http.jsonp(weatherUrl)
             .then(function(response, status) {
                 console.log(response.data.cod);
